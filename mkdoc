@@ -43,6 +43,7 @@ for (@mkd) {
     print $mdp "\n" . $linkrefs;
     close $mdp;
 }
+say STDERR "----";
 system("md-pandoc html-N < gitolite.mkd > $OUTDIR/gitolite.html");
 
 # send manually created HTML pages and images
